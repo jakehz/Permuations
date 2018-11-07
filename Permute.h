@@ -4,8 +4,16 @@ using std::string;
 
 class Node {
 public:
+	// initialize the node with a letter.
+	Node(char let)
+	{
+		// new node points to nothing (can be changed later)
+		next = NULL;
+		// initialize data.
+		data = let;
+	}
 	Node* next;
-	string data;
+	char data;
 };
 
 class Permute {
@@ -13,9 +21,10 @@ public:
 	// fill later
 	Permute(string, string);
 	// poplulates linked list with letters from word.
-	void pop_list(string);
-	void push_node();
+	void populate_list(string);
+	void push_node(char);
 	void permutate();
+	size_t total_permut() { return total;}
 	void print();
 private:
 	size_t total;
