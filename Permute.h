@@ -18,15 +18,16 @@ public:
 
 class Permute {
 public:
-	// fill later
 	Permute(string, string);
 	// poplulates linked list with letters from word.
 	void populate_list(string);
-	void push_node(char);
-	void permutate();
+	//void permutate();
+	void print_curr_list();
 	size_t total_permut() { return total;}
-	void print();
+	//void print();
 private:
+	void push_node(const char&);
+	void remove_node(const char&);
 	size_t total;
 	string firstString;
 	string secondString;
